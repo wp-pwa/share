@@ -4,7 +4,8 @@
   "description": "Share utilities for the Frontity platform.",
   "main": "./.build/index.js",
   "scripts": {
-    "build": "npm run clean && babel src -d .build",
+    "test": "jest --watch",
+    "build": "npm run clean && babel src -d .build --ignore 'src/__tests__'",
     "clean": "rm -rf .build && mkdir .build",
     "prepublish": "npm run build"
   },
@@ -33,6 +34,7 @@
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.49",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
