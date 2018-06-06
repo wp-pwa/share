@@ -2,11 +2,11 @@
   "name": "@frontity/share",
   "version": "0.0.1",
   "description": "Share utilities for the Frontity platform.",
-  "main": "./.build/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "jest --watch",
-    "build": "npm run clean && babel src -d .build --ignore 'src/__tests__'",
-    "clean": "rm -rf .build && mkdir .build",
+    "build": "npm run clean && babel src -d lib --ignore 'src/__tests__'",
+    "clean": "rm -rf lib && mkdir lib",
     "prepublish": "npm run build"
   },
   "repository": {

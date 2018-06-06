@@ -1,4 +1,6 @@
 *.log
 *.DS_Store
-lib
+src
 node_modules
+.babelrc
+.eslintrc
