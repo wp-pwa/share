@@ -1,0 +1,47 @@
+{
+  "name": "@frontity/share",
+  "version": "0.0.1",
+  "description": "Share utilities for the Frontity platform.",
+  "main": "./.build/index.js",
+  "scripts": {
+    "build": "npm run clean && babel src -d .build",
+    "clean": "rm -rf .build && mkdir .build",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontity/share.git"
+  },
+  "keywords": [
+    "frontity",
+    "share",
+    "react",
+    "mobx"
+  ],
+  "author": "David Arenas (david@frontity.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontity/share/issues"
+  },
+  "homepage": "https://github.com/frontity/share#readme",
+  "peerDependencies": {
+    "mobx": "^4.0",
+    "mobx-state-tree": "^2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.49",
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "@babel/preset-react": "^7.0.0-beta.49",
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
+    "jest": "^23.1.0",
+    "mobx": "^4.3.1",
+    "mobx-state-tree": "^2.0.5"
+  }
+}
