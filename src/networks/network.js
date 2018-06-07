@@ -1,12 +1,6 @@
 import { getRoot, types } from 'mobx-state-tree';
 import { get } from 'mobx';
 
-export const entityLinkView = self => ({
-  entityLink({ type, id }) {
-    return getRoot(self).connection.entity(type, id).link;
-  },
-})
-
 export default types
   .model('Network')
   .props({
