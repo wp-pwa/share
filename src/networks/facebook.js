@@ -26,7 +26,7 @@ export default Network.named('Facebook')
 
       let count;
       try {
-        const response = yield getEnv(self).request(requestUrl);
+        const response = yield getEnv(self).request.get(requestUrl);
         count = response.share.share_count;
       } catch(error) {
         count = null;
