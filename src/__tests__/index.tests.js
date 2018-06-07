@@ -21,7 +21,7 @@ describe('Share', () => {
     expect(share.allCounts({ type: 'post', id: 60 })).toBe(123);
   });
 
-  test.only('requestAllCounts', async () => {
+  test('requestAllCounts', async () => {
     const requestCount = jest.fn();
     const NetworkMock = Network.actions(() => ({ requestCount }));
 
