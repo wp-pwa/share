@@ -27,7 +27,9 @@
   "homepage": "https://github.com/frontity/share#readme",
   "peerDependencies": {
     "mobx": "^4.0",
-    "mobx-state-tree": "^2.0"
+    "mobx-state-tree": "^2.0",
+    "superagent": "^3.8.3",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.49",
@@ -44,9 +46,7 @@
     "eslint-plugin-react": "^7.9.1",
     "jest": "^23.1.0",
     "mobx": "^4.3.1",
-    "mobx-state-tree": "^2.0.5"
-  },
-  "dependencies": {
+    "mobx-state-tree": "^2.0.5",
     "superagent": "^3.8.3",
     "url": "^0.11.0"
   }

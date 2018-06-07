@@ -1,15 +1,14 @@
-import { getRoot, flow } from 'mobx-state-tree';
+import { getEnv, flow } from 'mobx-state-tree';
 import { set } from 'mobx';
-import url from 'url';
-import request from 'superagent';
+import { format } from 'url';
 import Network from './network';
 
 export default Network.named('Facebook')
   .views(self => ({
     url({ type, id, quote, hashtag }) {
-      const { link } = getRoot(self).connection.entity(type, id);
-      return url({
-        protocol: 'http:',
+      const link = self.entityLink({ type, id });
+      return format({
+        protocol: 'https:',
         host: 'www.facebook.com',
         pathname: 'sharer/sharer.php',
         query: { u: link, quote, hashtag },
@@ -18,15 +17,21 @@ export default Network.named('Facebook')
   }))
   .actions(self => ({
     requestCount: flow(function* requestCountFacebook({ type, id }) {
-      const { link } = getRoot(self).connection.entity(type, id);
-      const endpoint = {
-        protocol: 'http:',
+      const link = self.entityLink({ type, id });
+      const requestUrl = format({
+        protocol: 'https:',
         host: 'graph.facebook.com',
         query: { id: link },
-      };
+      });
 
-      const response = yield request.get(endpoint).accept('json');
+      let count;
+      try {
+        const response = yield getEnv(self).request(requestUrl);
+        count = response.share.share_count;
+      } catch(error) {
+        count = null;
+      }
 
-      set(self.countsMap, `${type}_${id}`, response.body.share.share_count);
+      set(self.countsMap, { [`${type}_${id}`]: count });
     }),
   }));
