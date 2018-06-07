@@ -62,7 +62,7 @@ describe('Share > Facebook', () => {
     const entityLink = 'https://demo.frontity.com/the-beauty-of-gullfoss';
     facebook.entityLink.mockReturnValue(entityLink);
 
-    // First request (superagent fails)
+    // First request (request fails)
     request.mockReturnValue(Promise.reject(new Error()));
     await facebook.requestCount({ type: 'post', id: 60 });
     expect(facebook.count({ type: 'post', id: 60 })).toBe(null);

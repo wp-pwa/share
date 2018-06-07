@@ -1,17 +1,9 @@
 import { types } from 'mobx-state-tree';
-import All from './all';
-import Facebook from './facebook';
-
-const networks = {
-  facebook: types.optional(Facebook, {}),
-};
+import networks, { all } from './networks';
 
 export default types
   .model('Share')
-  .props({
-    all: types.optional(All, {}),
-    ...networks,
-  })
+  .props({ all, ...networks })
   .views(self => ({
     get networks() {
       return Object.keys(networks).map(network => self[network]);
