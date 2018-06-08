@@ -7,7 +7,7 @@ Share utilities for the [:fast_forward: Frontity](https://github.com/wp-pwa/wp-p
 Install @frontity/share using [`npm`](https://www.npmjs.com/):
 
 ```bash
-npm install @frontity/wp-pwa
+npm install @frontity/share
 ```
 
 Then, import and use it in your [mobx-state-tree](https://github.com/mobxjs/mobx-state-tree) store:
@@ -18,7 +18,7 @@ import Share from '@frontity/share';
 
 const myStore = types.model('MyStore')
   .props({
-    share: types.optional(Share),
+    share: types.optional(Share, {}),
   })
   .create({});
 
@@ -35,15 +35,17 @@ myStore.share.facebook.url({ type: 'post', id: 60 });
 ```
 
 ## API
-### share
-* `share.networks`
+### Share
+* `share.networks` - Returns the list of all supported networks.
 
-### network
-Permitted values for network are: `all`, `facebook`
+### Networks
+
+#### counts
+Permitted values for `network` are `all`, `facebook`, `googlePlus`, `linkedin` and `pinterest`.
 * `share[network].count({ type, id })`
 * `share[network].requestCount({ type, id })`
 
-#### network-specific functions
+#### urls
 * `share.facebook.url({ type, id, quote, hashtag })`
 * `share.googlePlus.url({ type, id })`
 * `share.linkedin.url({ type, id, title, summary })`
