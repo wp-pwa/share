@@ -41,7 +41,7 @@ myStore.share.facebook.url({ type: 'post', id: 60 });
 ### Networks
 
 #### counts
-Permitted values for `network` are `all`, `facebook`, `googlePlus`, `linkedin` and `pinterest`.
+Permitted values for `network` are `all`, `facebook`, `googlePlus` and `pinterest`.
 * `share[network].count({ type, id })`
 * `share[network].requestCount({ type, id })`
 
