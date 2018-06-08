@@ -6,7 +6,8 @@ export default Network.named('All')
     count({ type, id }) {
       try {
         return getParent(self)
-          .networks.map(network => network.count({ type, id }))
+          .networks.filter(network => typeof network.count === 'function')
+          .map(network => network.count({ type, id }))
           .filter(count => typeof count === 'number')
           .reduce((all, count) => all + count);
       } catch (error) {
