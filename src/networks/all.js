@@ -17,7 +17,9 @@ export default Network.named('All')
   .actions(self => ({
     requestCount: flow(function* requestAllCounts({ type, id }) {
       yield Promise.all(
-        getParent(self).networks.map(network => network.requestCount({ type, id })),
+        getParent(self)
+          .networks.filter(network => typeof network.requestCount === 'function')
+          .map(network => network.requestCount({ type, id })),
       );
     }),
   }));

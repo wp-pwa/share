@@ -11,10 +11,11 @@ beforeEach(() => {
       all: types.optional(All, {}),
       network1: types.optional(Network, {}),
       network2: types.optional(Network, {}),
+      network3: types.optional(Network, {}),
     })
     .views(self => ({
       get networks() {
-        return [self.network1, self.network2];
+        return [self.network1, self.network2, self.network3];
       },
     }))
     .create({});
@@ -38,9 +39,10 @@ describe('Share > All', () => {
     const requestCount = jest.fn();
     share.network1.requestCount = requestCount;
     share.network2.requestCount = requestCount;
+    // share.network3.requestCount is undefined
 
     share.all.requestCount({ type: 'post', id: 60 });
-    expect(requestCount.mock.calls.length).toBe(share.networks.length);
+    expect(requestCount.mock.calls.length).toBe(2);
     expect(requestCount.mock.calls).toMatchSnapshot();
   });
 });
