@@ -8,7 +8,7 @@
     "test:debug": "node --inspect node_modules/.bin/jest --watch",
     "build": "npm run clean && babel src -d lib --ignore '**/*.tests.js'",
     "clean": "rm -rf lib && mkdir lib",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
