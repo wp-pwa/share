@@ -39,8 +39,7 @@ export default Network.named('GooglePlus')
           .request.post('https://clients6.google.com/rpc')
           .set('Accept', 'application/json')
           .set('Content-type', 'application/json;charset=UTF-8')
-          .send(request)
-          .end();
+          .send(request);
 
         ({ count } = response.result.metadata.globalCounts);
       } catch (error) {
