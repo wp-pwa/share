@@ -5,6 +5,9 @@ Object {
   "all": Object {
     "countsMap": Object {},
   },
+  "email": Object {
+    "countsMap": Object {},
+  },
   "facebook": Object {
     "countsMap": Object {},
   },
@@ -30,5 +33,6 @@ Array [
   "Linkedin",
   "Twitter",
   "Whatsapp",
+  "Email",
 ]
 `;

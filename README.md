@@ -49,3 +49,4 @@ Permitted values for network are: `all`, `facebook`
 * `share.linkedin.url({ type, id, title, summary })`
 * `share.twitter.url({ type, id, text, via, hashtags })`
 * `share.whatsapp.url({ type, id, text })`
+* `share.email.url({ type, id, subject, body })`

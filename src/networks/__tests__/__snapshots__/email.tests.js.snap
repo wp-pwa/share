@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share > Email url 1`] = `"mailto:?to=&subject=The%20Beauties%20of%20Gullfoss&body=Gullfoss%20is%20a%20waterfall%20located%20in%20the%20canyon%20of%20the%20Hv%C3%ADt%C3%A1%20river%20in%20southwest%20Iceland.%0A%0Ahttps%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss"`;

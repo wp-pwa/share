@@ -5,6 +5,7 @@ import GooglePlus from './google-plus';
 import Linkedin from './linkedin';
 import Twitter from './twitter';
 import Whatsapp from './whatsapp';
+import Email from './email';
 
 export const all = types.optional(All, {});
 
@@ -14,4 +15,5 @@ export default {
   linkedin: types.optional(Linkedin, {}),
   twitter: types.optional(Twitter, {}),
   whatsapp: types.optional(Whatsapp, {}),
+  email: types.optional(Email, {}),
 };
