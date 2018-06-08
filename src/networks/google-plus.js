@@ -41,7 +41,7 @@ export default Network.named('GooglePlus')
           .set('Content-type', 'application/json;charset=UTF-8')
           .send(request);
 
-        ({ count } = response.result.metadata.globalCounts);
+        ({ count } = response.body.result.metadata.globalCounts);
       } catch (error) {
         console.warn('shared.googlePlus.requestCount', error);
         count = null;

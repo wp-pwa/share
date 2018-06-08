@@ -24,9 +24,9 @@ describe('Share > Pinterest', () => {
     pinterest.entityLink = jest.fn();
     pinterest.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
-    request.get.mockResolvedValueOnce(
-      'cb({"url":"https://demo.frontity.com/the-beauties-of-gullfoss","count":123})',
-    );
+    request.get.mockResolvedValueOnce({
+      text: 'cb({"url":"https://demo.frontity.com/the-beauties-of-gullfoss","count":123})',
+    });
 
     when(
       () => pinterest.count({ type: 'post', id: 60 }),

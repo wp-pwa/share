@@ -17,11 +17,13 @@ describe('Share > Facebook', () => {
     facebook.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     request.get.mockResolvedValueOnce({
-      share: {
-        comment_count: 0,
-        share_count: 123,
+      body: {
+        share: {
+          comment_count: 0,
+          share_count: 123,
+        },
+        id: 'https://demo.frontity.com/the-beauty-of-gullfoss',
       },
-      id: 'https://demo.frontity.com/the-beauty-of-gullfoss',
     });
 
     when(
