@@ -11,6 +11,9 @@ Object {
   "googlePlus": Object {
     "countsMap": Object {},
   },
+  "linkedin": Object {
+    "countsMap": Object {},
+  },
 }
 `;
 
@@ -18,5 +21,6 @@ exports[`Share networks 2`] = `
 Array [
   "Facebook",
   "GooglePlus",
+  "Linkedin",
 ]
 `;
