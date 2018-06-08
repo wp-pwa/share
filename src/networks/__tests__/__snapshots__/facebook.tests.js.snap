@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share > Facebook requestCount fails 1`] = `
+Array [
+  Array [
+    "https://graph.facebook.com?id=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss",
+  ],
+  Array [
+    "https://graph.facebook.com?id=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss",
+  ],
+]
+`;
+
+exports[`Share > Facebook requestCount success 1`] = `
+Array [
+  Array [
+    Object {
+      "id": 60,
+      "type": "post",
+    },
+  ],
+]
+`;
+
+exports[`Share > Facebook requestCount success 2`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": "https://demo.frontity.com/the-beauty-of-gullfoss",
+  },
+]
+`;
+
+exports[`Share > Facebook requestCount success 3`] = `
+Array [
+  Array [
+    "https://graph.facebook.com?id=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss",
+  ],
+]
+`;
+
+exports[`Share > Facebook requestCount success 4`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": Promise {},
+  },
+]
+`;
+
+exports[`Share > Facebook url 1`] = `"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss&quote=q&hashtag=%23tag"`;

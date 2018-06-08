@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share networks 1`] = `
+Object {
+  "all": Object {
+    "countsMap": Object {},
+  },
+  "email": Object {
+    "countsMap": Object {},
+  },
+  "facebook": Object {
+    "countsMap": Object {},
+  },
+  "googlePlus": Object {
+    "countsMap": Object {},
+  },
+  "linkedin": Object {
+    "countsMap": Object {},
+  },
+  "pinterest": Object {
+    "countsMap": Object {},
+  },
+  "telegram": Object {
+    "countsMap": Object {},
+  },
+  "twitter": Object {
+    "countsMap": Object {},
+  },
+  "whatsapp": Object {
+    "countsMap": Object {},
+  },
+}
+`;
+
+exports[`Share networks 2`] = `
+Array [
+  "Facebook",
+  "GooglePlus",
+  "Linkedin",
+  "Twitter",
+  "Whatsapp",
+  "Telegram",
+  "Email",
+  "Pinterest",
+]
+`;

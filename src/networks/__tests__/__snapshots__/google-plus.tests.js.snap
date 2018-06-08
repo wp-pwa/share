@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share > GooglePlus requestCount fails 1`] = `
+Array [
+  Array [
+    Object {
+      "apiVersion": "v1",
+      "id": "p",
+      "jsonrpc": "2.0",
+      "key": "p",
+      "method": "pos.plusones.get",
+      "params": Object {
+        "groupId": "@self",
+        "id": "https://demo.frontity.com/the-beauty-of-gullfoss",
+        "nolog": true,
+        "source": "widget",
+        "userId": "@viewer",
+      },
+    },
+  ],
+  Array [
+    Object {
+      "apiVersion": "v1",
+      "id": "p",
+      "jsonrpc": "2.0",
+      "key": "p",
+      "method": "pos.plusones.get",
+      "params": Object {
+        "groupId": "@self",
+        "id": "https://demo.frontity.com/the-beauty-of-gullfoss",
+        "nolog": true,
+        "source": "widget",
+        "userId": "@viewer",
+      },
+    },
+  ],
+]
+`;
+
+exports[`Share > GooglePlus requestCount success 1`] = `
+Array [
+  Array [
+    Object {
+      "id": 60,
+      "type": "post",
+    },
+  ],
+]
+`;
+
+exports[`Share > GooglePlus requestCount success 2`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": "https://demo.frontity.com/the-beauty-of-gullfoss",
+  },
+]
+`;
+
+exports[`Share > GooglePlus requestCount success 3`] = `
+Object {
+  "post": [MockFunction] {
+    "calls": Array [
+      Array [
+        "https://clients6.google.com/rpc",
+      ],
+    ],
+    "results": Array [
+      Object {
+        "isThrow": false,
+        "value": [Circular],
+      },
+    ],
+  },
+  "send": [MockFunction] {
+    "calls": Array [
+      Array [
+        Object {
+          "apiVersion": "v1",
+          "id": "p",
+          "jsonrpc": "2.0",
+          "key": "p",
+          "method": "pos.plusones.get",
+          "params": Object {
+            "groupId": "@self",
+            "id": "https://demo.frontity.com/the-beauty-of-gullfoss",
+            "nolog": true,
+            "source": "widget",
+            "userId": "@viewer",
+          },
+        },
+      ],
+    ],
+    "results": Array [
+      Object {
+        "isThrow": false,
+        "value": Promise {},
+      },
+    ],
+  },
+  "set": [MockFunction] {
+    "calls": Array [
+      Array [
+        "Accept",
+        "application/json",
+      ],
+      Array [
+        "Content-type",
+        "application/json;charset=UTF-8",
+      ],
+    ],
+    "results": Array [
+      Object {
+        "isThrow": false,
+        "value": [Circular],
+      },
+      Object {
+        "isThrow": false,
+        "value": [Circular],
+      },
+    ],
+  },
+}
+`;
+
+exports[`Share > GooglePlus url 1`] = `"https://plus.google.com/share?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss"`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share > All requestCount 1`] = `
+Array [
+  Array [
+    Object {
+      "id": 60,
+      "type": "post",
+    },
+  ],
+  Array [
+    Object {
+      "id": 60,
+      "type": "post",
+    },
+  ],
+]
+`;

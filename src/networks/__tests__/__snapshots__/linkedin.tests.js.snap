@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share > Linkedin requestCount fails 1`] = `
+Array [
+  Array [
+    "https://www.linkedin.com/countserv/count/share?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss",
+  ],
+  Array [
+    "https://www.linkedin.com/countserv/count/share?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss",
+  ],
+]
+`;
+
+exports[`Share > Linkedin requestCount success 1`] = `
+Array [
+  Array [
+    Object {
+      "id": 60,
+      "type": "post",
+    },
+  ],
+]
+`;
+
+exports[`Share > Linkedin requestCount success 2`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": "https://demo.frontity.com/the-beauties-of-gullfoss",
+  },
+]
+`;
+
+exports[`Share > Linkedin requestCount success 3`] = `
+Array [
+  Array [
+    "https://www.linkedin.com/countserv/count/share?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss",
+  ],
+]
+`;
+
+exports[`Share > Linkedin requestCount success 4`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": Promise {},
+  },
+]
+`;
+
+exports[`Share > Linkedin url 1`] = `"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss&title=The%20Beauties%20of%20Gullfoss&summary=Gullfoss%20is%20a%20waterfall%20located%20in%20the%20canyon%20of%20the%20Hv%C3%ADt%C3%A1%20river%20in%20southwest%20Iceland."`;
