@@ -8,8 +8,6 @@ describe('Share > Facebook', () => {
     facebook.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     expect(facebook.url({ type: 'post', id: 60, quote: 'q', hashtag: '#tag' })).toMatchSnapshot();
-    expect(facebook.entityLink.mock.calls).toMatchSnapshot();
-    expect(facebook.entityLink.mock.results).toMatchSnapshot();
   });
 
   test('requestCount success', done => {

@@ -49,23 +49,3 @@ Array [
 `;
 
 exports[`Share > Linkedin url 1`] = `"https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss&title=The%20Beauties%20of%20Gullfoss&summary=Gullfoss%20is%20a%20waterfall%20located%20in%20the%20canyon%20of%20the%20Hv%C3%ADt%C3%A1%20river%20in%20southwest%20Iceland."`;
-
-exports[`Share > Linkedin url 2`] = `
-Array [
-  Array [
-    Object {
-      "id": 60,
-      "type": "post",
-    },
-  ],
-]
-`;
-
-exports[`Share > Linkedin url 3`] = `
-Array [
-  Object {
-    "isThrow": false,
-    "value": "https://demo.frontity.com/the-beauties-of-gullfoss",
-  },
-]
-`;

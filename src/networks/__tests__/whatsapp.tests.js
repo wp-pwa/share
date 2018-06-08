@@ -13,8 +13,5 @@ describe('Share > Whatsapp', () => {
         text: 'The Beauties of Gullfoss',
       }),
     ).toMatchSnapshot();
-
-    expect(whatsapp.entityLink.mock.calls).toMatchSnapshot();
-    expect(whatsapp.entityLink.mock.results).toMatchSnapshot();
   });
 });

@@ -17,8 +17,6 @@ describe('Share > GooglePlus', () => {
     googlePlus.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     expect(googlePlus.url({ type: 'post', id: 60 })).toMatchSnapshot();
-    expect(googlePlus.entityLink.mock.calls).toMatchSnapshot();
-    expect(googlePlus.entityLink.mock.results).toMatchSnapshot();
   });
 
   test('requestCount success', done => {

@@ -15,8 +15,5 @@ describe('Share > Twitter', () => {
         hashtags: ['frontity', 'gullfoss', 'beauties'],
       }),
     ).toMatchSnapshot();
-
-    expect(twitter.entityLink.mock.calls).toMatchSnapshot();
-    expect(twitter.entityLink.mock.results).toMatchSnapshot();
   });
 });

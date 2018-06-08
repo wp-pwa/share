@@ -124,23 +124,3 @@ Object {
 `;
 
 exports[`Share > GooglePlus url 1`] = `"https://plus.google.com/share?url=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss"`;
-
-exports[`Share > GooglePlus url 2`] = `
-Array [
-  Array [
-    Object {
-      "id": 60,
-      "type": "post",
-    },
-  ],
-]
-`;
-
-exports[`Share > GooglePlus url 3`] = `
-Array [
-  Object {
-    "isThrow": false,
-    "value": "https://demo.frontity.com/the-beauty-of-gullfoss",
-  },
-]
-`;

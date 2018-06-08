@@ -16,9 +16,6 @@ describe('Share > Linkedin', () => {
           'Gullfoss is a waterfall located in the canyon of the Hvítá river in southwest Iceland.',
       }),
     ).toMatchSnapshot();
-
-    expect(linkedin.entityLink.mock.calls).toMatchSnapshot();
-    expect(linkedin.entityLink.mock.results).toMatchSnapshot();
   });
 
   test('requestCount success', done => {

@@ -49,23 +49,3 @@ Array [
 `;
 
 exports[`Share > Facebook url 1`] = `"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemo.frontity.com%2Fthe-beauty-of-gullfoss&quote=q&hashtag=%23tag"`;
-
-exports[`Share > Facebook url 2`] = `
-Array [
-  Array [
-    Object {
-      "id": 60,
-      "type": "post",
-    },
-  ],
-]
-`;
-
-exports[`Share > Facebook url 3`] = `
-Array [
-  Object {
-    "isThrow": false,
-    "value": "https://demo.frontity.com/the-beauty-of-gullfoss",
-  },
-]
-`;
