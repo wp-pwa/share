@@ -26,18 +26,20 @@ describe('Share > GooglePlus', () => {
     googlePlus.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     request.send.mockResolvedValueOnce({
-      id: 'p',
-      result: {
-        kind: 'pos#plusones',
-        id: 'https://demo.frontity.com/the-beauty-of-gullfoss',
-        isSetByViewer: false,
-        metadata: {
-          type: 'URL',
-          globalCounts: {
-            count: 123,
+      body: {
+        id: 'p',
+        result: {
+          kind: 'pos#plusones',
+          id: 'https://demo.frontity.com/the-beauty-of-gullfoss',
+          isSetByViewer: false,
+          metadata: {
+            type: 'URL',
+            globalCounts: {
+              count: 123,
+            },
           },
+          abtk: '',
         },
-        abtk: '',
       },
     });
 

@@ -28,7 +28,7 @@ export default Network.named('Pinterest')
       let count;
       try {
         const response = yield getEnv(self).request.get(requestUrl);
-        const data = /\((.+)\)/.exec(response)[1];
+        const data = /\((.+)\)/.exec(response.text)[1];
         ({ count } = JSON.parse(data));
       } catch (error) {
         console.warn('shared.pinterest.requestCount', error);
