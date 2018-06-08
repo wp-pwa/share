@@ -28,8 +28,9 @@ export default Network.named('Facebook')
       try {
         const response = yield getEnv(self).request.get(requestUrl);
         count = response.share.share_count;
-      } catch(error) {
+      } catch (error) {
         count = null;
+        console.warn(`share.facebook.requestCount`, error);
       }
 
       set(self.countsMap, { [`${type}_${id}`]: count });
