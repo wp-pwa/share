@@ -48,3 +48,4 @@ Permitted values for network are: `all`, `facebook`
 * `share.googlePlus.url({ type, id })`
 * `share.linkedin.url({ type, id, title, summary })`
 * `share.twitter.url({ type, id, text, via, hashtags })`
+* `share.whatsapp.url({ type, id, text })`

@@ -17,6 +17,9 @@ Object {
   "twitter": Object {
     "countsMap": Object {},
   },
+  "whatsapp": Object {
+    "countsMap": Object {},
+  },
 }
 `;
 
@@ -26,5 +29,6 @@ Array [
   "GooglePlus",
   "Linkedin",
   "Twitter",
+  "Whatsapp",
 ]
 `;

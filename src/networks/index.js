@@ -4,6 +4,7 @@ import Facebook from './facebook';
 import GooglePlus from './google-plus';
 import Linkedin from './linkedin';
 import Twitter from './twitter';
+import Whatsapp from './whatsapp';
 
 export const all = types.optional(All, {});
 
@@ -12,4 +13,5 @@ export default {
   googlePlus: types.optional(GooglePlus, {}),
   linkedin: types.optional(Linkedin, {}),
   twitter: types.optional(Twitter, {}),
+  whatsapp: types.optional(Whatsapp, {}),
 };

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Share > Whatsapp url 1`] = `"https://api.whatsapp.com/send?text=The%20Beauties%20of%20Gullfoss%20https%3A%2F%2Fdemo.frontity.com%2Fthe-beauties-of-gullfoss"`;
+
+exports[`Share > Whatsapp url 2`] = `
+Array [
+  Array [
+    Object {
+      "id": 60,
+      "type": "post",
+    },
+  ],
+]
+`;
+
+exports[`Share > Whatsapp url 3`] = `
+Array [
+  Object {
+    "isThrow": false,
+    "value": "https://demo.frontity.com/the-beauties-of-gullfoss",
+  },
+]
+`;
