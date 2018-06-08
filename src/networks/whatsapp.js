@@ -9,7 +9,7 @@ export default Network.named('Whatsapp').views(self => ({
       host: 'api.whatsapp.com',
       pathname: 'send',
       query: {
-        text: `${text} ${link}`,
+        text: text ? `${text} ${link}` : link,
       },
     });
   },
