@@ -31,6 +31,7 @@ export default Network.named('Pinterest')
         const data = /\((.+)\)/.exec(response)[1];
         ({ count } = JSON.parse(data));
       } catch (error) {
+        console.warn('shared.pinterest.requestCount', error);
         count = null;
       }
 

@@ -11,6 +11,7 @@ export default Network.named('All')
           .filter(count => typeof count === 'number')
           .reduce((all, count) => all + count);
       } catch (error) {
+        console.warn('shared.all.count', error);
         return null;
       }
     },

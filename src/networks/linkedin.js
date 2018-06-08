@@ -32,6 +32,7 @@ export default Network.named('Linkedin')
         const data = /^IN.Tags.Share.handleCount\((.+)\)/.exec(response)[1];
         ({ count } = JSON.parse(data));
       } catch (error) {
+        console.warn('shared.linkedin.requestCount', error);
         count = null;
       }
 

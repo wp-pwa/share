@@ -43,6 +43,7 @@ export default Network.named('GooglePlus')
 
         ({ count } = response.result.metadata.globalCounts);
       } catch (error) {
+        console.warn('shared.googlePlus.requestCount', error);
         count = null;
       }
 
