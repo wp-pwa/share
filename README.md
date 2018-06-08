@@ -45,3 +45,6 @@ Permitted values for network are: `all`, `facebook`
 
 #### network-specific functions
 * `share.facebook.url({ type, id, quote, hashtag })`
+* `share.googlePlus.url({ type, id })`
+* `share.linkedin.url({ type, id, title, summary })`
+* `share.twitter.url({ type, id, text, via, hashtags })`
