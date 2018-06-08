@@ -3,20 +3,20 @@ import { set } from 'mobx';
 import { format } from 'url';
 import Network from './network';
 
-export default Network.named('Facebook')
+export default Network.named('GooglePlus')
   .views(self => ({
-    url({ type, id, quote, hashtag }) {
+    url({ type, id }) {
       const link = self.entityLink({ type, id });
       return format({
         protocol: 'https:',
-        host: 'www.facebook.com',
-        pathname: 'sharer/sharer.php',
-        query: { u: link, quote, hashtag },
+        host: 'plus.google.com',
+        pathname: 'share',
+        query: { url: link },
       });
     },
   }))
   .actions(self => ({
-    requestCount: flow(function* requestCountFacebook({ type, id }) {
+    requestCount: flow(function* requestCountGooglePlus({ type, id }) {
       const link = self.entityLink({ type, id });
       const request = {
         method: 'pos.plusones.get',
