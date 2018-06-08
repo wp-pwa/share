@@ -14,6 +14,9 @@ Object {
   "linkedin": Object {
     "countsMap": Object {},
   },
+  "twitter": Object {
+    "countsMap": Object {},
+  },
 }
 `;
 
@@ -22,5 +25,6 @@ Array [
   "Facebook",
   "GooglePlus",
   "Linkedin",
+  "Twitter",
 ]
 `;
