@@ -8,11 +8,15 @@ Object {
   "facebook": Object {
     "countsMap": Object {},
   },
+  "googlePlus": Object {
+    "countsMap": Object {},
+  },
 }
 `;
 
 exports[`Share networks 2`] = `
 Array [
   "Facebook",
+  "GooglePlus",
 ]
 `;
