@@ -7,6 +7,7 @@ import Twitter from './twitter';
 import Whatsapp from './whatsapp';
 import Telegram from './telegram';
 import Email from './email';
+import Pinterest from './pinterest';
 
 export const all = types.optional(All, {});
 
@@ -18,4 +19,5 @@ export default {
   whatsapp: types.optional(Whatsapp, {}),
   telegram: types.optional(Telegram, {}),
   email: types.optional(Email, {}),
+  pinterest: types.optional(Pinterest, {}),
 };
