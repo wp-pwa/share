@@ -9,7 +9,7 @@ export default Network.named('All')
           .networks.filter(network => typeof network.count === 'function')
           .map(network => network.count({ type, id }))
           .filter(count => typeof count === 'number')
-          .reduce((all, count) => all + count);
+          .reduce((all, count) => all + count, 0);
       } catch (error) {
         console.warn('shared.all.count', error);
         return null;
