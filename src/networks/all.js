@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { getParent, flow } from 'mobx-state-tree';
 import Network from './network';
 
@@ -11,7 +12,7 @@ export default Network.named('All')
           .filter(count => typeof count === 'number')
           .reduce((all, count) => all + count);
       } catch (error) {
-        console.warn('shared.all.count', error);
+        console.warn('shared.all.count failed', error);
         return null;
       }
     },
