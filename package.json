@@ -1,6 +1,6 @@
 {
   "name": "@frontity/share",
-  "version": "0.1.3",
+  "version": "0.0.3",
   "description": "Share utilities for the Frontity platform.",
   "main": "./lib/index.js",
   "scripts": {
