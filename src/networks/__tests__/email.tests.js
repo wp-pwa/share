@@ -3,7 +3,7 @@ import Email from '../email';
 describe('Share > Email', () => {
   test('url', () => {
     const email = Email.create({});
-    email.entityLink = jest.fn();
+    Object.defineProperty(email, 'entityLink', {value: jest.fn(), writable: true});
     email.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(

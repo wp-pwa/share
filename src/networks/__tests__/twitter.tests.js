@@ -1,9 +1,9 @@
 import Twitter from '../twitter';
 
 describe('Share > Twitter', () => {
-  test('url', () => {
+  test('url - all parameters', () => {
     const twitter = Twitter.create({});
-    twitter.entityLink = jest.fn();
+    Object.defineProperty(twitter, 'entityLink', {value: jest.fn(), writable: true});
     twitter.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
@@ -13,6 +13,19 @@ describe('Share > Twitter', () => {
         text: 'The Beauties of Gullfoss',
         via: 'frontity.com',
         hashtags: ['frontity', 'gullfoss', 'beauties'],
+      }),
+    ).toMatchSnapshot();
+  });
+
+  test('url - required parameters', () => {
+    const twitter = Twitter.create({});
+    Object.defineProperty(twitter, 'entityLink', {value: jest.fn(), writable: true});
+    twitter.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
+
+    expect(
+      twitter.url({
+        type: 'post',
+        id: 60,
       }),
     ).toMatchSnapshot();
   });

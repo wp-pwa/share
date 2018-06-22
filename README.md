@@ -54,3 +54,9 @@ Permitted values for `network` are `all`, `facebook`, `googlePlus` and `pinteres
 * `share.telegram.url({ type, id, text })`
 * `share.email.url({ type, id, subject, body })`
 * `share.pinterest.url({ type, id, media, description })`
+
+## Contribute
+
+Thank you for thinking about contributing to a Frontity project!
+
+Please take a look at [this repo](https://github.com/frontity/contribute) to know how to do so.

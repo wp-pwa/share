@@ -13,7 +13,7 @@ const requestMock = () => {
 describe('Share > GooglePlus', () => {
   test('url', () => {
     const googlePlus = GooglePlus.create({});
-    googlePlus.entityLink = jest.fn();
+    Object.defineProperty(googlePlus, 'entityLink', {value: jest.fn(), writable: true});
     googlePlus.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     expect(googlePlus.url({ type: 'post', id: 60 })).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('Share > GooglePlus', () => {
   test('requestCount success', done => {
     const request = requestMock();
     const googlePlus = GooglePlus.create({}, { request });
-    googlePlus.entityLink = jest.fn();
+    Object.defineProperty(googlePlus, 'entityLink', {value: jest.fn(), writable: true});
     googlePlus.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     request.send.mockResolvedValueOnce({
@@ -61,7 +61,7 @@ describe('Share > GooglePlus', () => {
     const request = requestMock();
 
     const googlePlus = GooglePlus.create({}, { request });
-    googlePlus.entityLink = jest.fn();
+    Object.defineProperty(googlePlus, 'entityLink', {value: jest.fn(), writable: true});
     googlePlus.entityLink.mockReturnValue('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     // First request (request fails)
