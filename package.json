@@ -11,7 +11,9 @@
     "lint-staged": "lint-staged",
     "build": "npm run clean && babel src -d lib --ignore '**/*.tests.js'",
     "clean": "rm -rf lib && mkdir lib",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
