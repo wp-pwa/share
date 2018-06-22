@@ -4,7 +4,7 @@ import Facebook from '../facebook';
 describe('Share > Facebook', () => {
   test('url', () => {
     const facebook = Facebook.create({});
-    facebook.entityLink = jest.fn();
+    Object.defineProperty(facebook, 'entityLink', {value: jest.fn(), writable: true});
     facebook.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     expect(facebook.url({ type: 'post', id: 60, quote: 'q', hashtag: '#tag' })).toMatchSnapshot();
@@ -13,7 +13,7 @@ describe('Share > Facebook', () => {
   test('requestCount success', done => {
     const request = { get: jest.fn() };
     const facebook = Facebook.create({}, { request });
-    facebook.entityLink = jest.fn();
+    Object.defineProperty(facebook, 'entityLink', {value: jest.fn(), writable: true});
     facebook.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     request.get.mockResolvedValueOnce({
@@ -44,7 +44,7 @@ describe('Share > Facebook', () => {
   test('requestCount fails', async () => {
     const request = { get: jest.fn() };
     const facebook = Facebook.create({}, { request });
-    facebook.entityLink = jest.fn();
+    Object.defineProperty(facebook, 'entityLink', {value: jest.fn(), writable: true});
     facebook.entityLink.mockReturnValue('https://demo.frontity.com/the-beauty-of-gullfoss');
 
     // First request (request fails)

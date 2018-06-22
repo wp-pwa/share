@@ -3,7 +3,7 @@ import Telegram from '../telegram';
 describe('Share > Telegram', () => {
   test('url - all parameters', () => {
     const telegram = Telegram.create({});
-    telegram.entityLink = jest.fn();
+    Object.defineProperty(telegram, 'entityLink', {value: jest.fn(), writable: true});
     telegram.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
@@ -17,7 +17,7 @@ describe('Share > Telegram', () => {
 
   test('url - required parameters', () => {
     const telegram = Telegram.create({});
-    telegram.entityLink = jest.fn();
+    Object.defineProperty(telegram, 'entityLink', {value: jest.fn(), writable: true});
     telegram.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(

@@ -3,7 +3,7 @@ import Whatsapp from '../whatsapp';
 describe('Share > Whatsapp', () => {
   test('url - all parameters', () => {
     const whatsapp = Whatsapp.create({});
-    whatsapp.entityLink = jest.fn();
+    Object.defineProperty(whatsapp, 'entityLink', {value: jest.fn(), writable: true});
     whatsapp.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
@@ -17,7 +17,7 @@ describe('Share > Whatsapp', () => {
 
   test('url - required parameters', () => {
     const whatsapp = Whatsapp.create({});
-    whatsapp.entityLink = jest.fn();
+    Object.defineProperty(whatsapp, 'entityLink', {value: jest.fn(), writable: true});
     whatsapp.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
