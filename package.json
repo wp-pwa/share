@@ -4,8 +4,10 @@
   "description": "Share utilities for the Frontity platform.",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "jest --watch --silent",
+    "test": "jest --silent",
+    "test:watch": "jest --watch --silent",
     "test:debug": "node --inspect node_modules/.bin/jest --watch",
+    "lint-staged": "lint-staged",
     "build": "npm run clean && babel src -d lib --ignore '**/*.tests.js'",
     "clean": "rm -rf lib && mkdir lib",
     "prepublishOnly": "npm run build"
@@ -45,9 +47,12 @@
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
+    "husky": "^0.14.3",
     "jest": "^23.1.0",
+    "lint-staged": "^7.2.0",
     "mobx": "^4.3.1",
     "mobx-state-tree": "^2.0.5",
+    "prettier": "^1.13.5",
     "superagent": "^3.8.3",
     "url": "^0.11.0"
   },
