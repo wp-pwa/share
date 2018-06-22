@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest --watch --silent",
     "test:debug": "node --inspect node_modules/.bin/jest --watch",
+    "cz": "git-cz",
     "lint-staged": "lint-staged",
     "build": "npm run clean && babel src -d lib --ignore '**/*.tests.js'",
     "clean": "rm -rf lib && mkdir lib",
@@ -42,6 +43,8 @@
     "@commitlint/config-conventional": "^7.0.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
