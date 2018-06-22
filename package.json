@@ -5,6 +5,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "jest --watch --silent",
+    "test:ci": "jest --silent",
     "test:debug": "node --inspect node_modules/.bin/jest --watch",
     "cz": "git-cz",
     "lint-staged": "lint-staged",
