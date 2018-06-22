@@ -4,7 +4,7 @@ import Pinterest from '../pinterest';
 describe('Share > Pinterest', () => {
   test('url', () => {
     const pinterest = Pinterest.create({});
-    pinterest.entityLink = jest.fn();
+    Object.defineProperty(pinterest, 'entityLink', {value: jest.fn(), writable: true});
     pinterest.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
@@ -21,7 +21,7 @@ describe('Share > Pinterest', () => {
   test('requestCount success', done => {
     const request = { get: jest.fn() };
     const pinterest = Pinterest.create({}, { request });
-    pinterest.entityLink = jest.fn();
+    Object.defineProperty(pinterest, 'entityLink', {value: jest.fn(), writable: true});
     pinterest.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     request.get.mockResolvedValueOnce({
@@ -46,7 +46,7 @@ describe('Share > Pinterest', () => {
   test('requestCount fails', async () => {
     const request = { get: jest.fn() };
     const pinterest = Pinterest.create({}, { request });
-    pinterest.entityLink = jest.fn();
+    Object.defineProperty(pinterest, 'entityLink', {value: jest.fn(), writable: true});
     pinterest.entityLink.mockReturnValue('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     // First request (request fails)

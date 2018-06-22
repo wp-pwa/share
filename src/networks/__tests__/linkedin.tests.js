@@ -3,7 +3,7 @@ import Linkedin from '../linkedin';
 describe('Share > Linkedin', () => {
   test('url', () => {
     const linkedin = Linkedin.create({});
-    linkedin.entityLink = jest.fn();
+    Object.defineProperty(linkedin, 'entityLink', {value: jest.fn(), writable: true});
     linkedin.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(

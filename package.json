@@ -5,10 +5,15 @@
   "main": "./lib/index.js",
   "scripts": {
     "test": "jest --watch --silent",
+    "test:ci": "jest --silent",
     "test:debug": "node --inspect node_modules/.bin/jest --watch",
+    "cz": "git-cz",
+    "lint-staged": "lint-staged",
     "build": "npm run clean && babel src -d lib --ignore '**/*.tests.js'",
     "clean": "rm -rf lib && mkdir lib",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -20,7 +25,7 @@
     "react",
     "mobx"
   ],
-  "author": "David Arenas (david@frontity.com)",
+  "author": "David Arenas (david@frontity.com), Luis Herranz (luis@frontity.com), Eduardo Campaña (eduardo@frontity.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/frontity/share/issues"
@@ -37,18 +42,33 @@
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
     "@babel/preset-react": "^7.0.0-beta.49",
+    "@commitlint/cli": "^7.0.0",
+    "@commitlint/config-conventional": "^7.0.1",
+    "@semantic-release/changelog": "^2.0.2",
+    "@semantic-release/git": "^5.0.0",
+    "@semantic-release/github": "^4.2.17",
+    "@semantic-release/npm": "^3.3.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^8.2.3",
+    "commitizen": "^2.10.1",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1",
+    "husky": "^1.0.0-rc.9",
     "jest": "^23.1.0",
+    "lint-staged": "^7.2.0",
     "mobx": "^4.3.1",
     "mobx-state-tree": "^2.0.5",
+    "prettier": "^1.13.5",
+    "semantic-release": "^15.6.0",
     "superagent": "^3.8.3",
+    "travis-deploy-once": "^5.0.0",
     "url": "^0.11.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -3,7 +3,7 @@ import Twitter from '../twitter';
 describe('Share > Twitter', () => {
   test('url - all parameters', () => {
     const twitter = Twitter.create({});
-    twitter.entityLink = jest.fn();
+    Object.defineProperty(twitter, 'entityLink', {value: jest.fn(), writable: true});
     twitter.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
@@ -19,7 +19,7 @@ describe('Share > Twitter', () => {
 
   test('url - required parameters', () => {
     const twitter = Twitter.create({});
-    twitter.entityLink = jest.fn();
+    Object.defineProperty(twitter, 'entityLink', {value: jest.fn(), writable: true});
     twitter.entityLink.mockReturnValueOnce('https://demo.frontity.com/the-beauties-of-gullfoss');
 
     expect(
