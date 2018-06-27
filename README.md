@@ -2,6 +2,8 @@
 
 Share utilities for the [:fast_forward: Frontity](https://github.com/wp-pwa/wp-pwa) platform.
 
+[![npm version](https://badge.fury.io/js/%40frontity%2Fshare.svg)](https://badge.fury.io/js/%40frontity%2Fshare) [![Build Status](https://travis-ci.org/frontity/share.svg?branch=master)](https://travis-ci.org/frontity/share)
+
 ## Usage
 
 Install @frontity/share using [`npm`](https://www.npmjs.com/):
