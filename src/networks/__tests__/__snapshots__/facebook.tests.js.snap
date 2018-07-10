@@ -43,7 +43,21 @@ exports[`Share > Facebook requestCount success 4`] = `
 Array [
   Object {
     "isThrow": false,
-    "value": Promise {},
+    "value": Object {
+      "accept": [MockFunction] {
+        "calls": Array [
+          Array [
+            "json",
+          ],
+        ],
+        "results": Array [
+          Object {
+            "isThrow": false,
+            "value": Promise {},
+          },
+        ],
+      },
+    },
   },
 ]
 `;
