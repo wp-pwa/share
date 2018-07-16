@@ -1,20 +1,17 @@
-/* eslint-disable no-console */
 import { getParent, flow } from 'mobx-state-tree';
 import Network from './network';
 
 export default Network.named('All')
   .views(self => ({
     count({ type, id }) {
-      try {
-        return getParent(self)
-          .networks.filter(network => typeof network.count === 'function')
-          .map(network => network.count({ type, id }))
-          .filter(count => typeof count === 'number')
-          .reduce((all, count) => all + count);
-      } catch (error) {
-        console.warn('shared.all.count failed', error);
-        return null;
-      }
+      const allCounts = getParent(self)
+        .networks.filter(network => typeof network.count === 'function')
+        .map(network => network.count({ type, id }))
+        .filter(count => typeof count === 'number');
+
+      return allCounts.length
+        ? allCounts.reduce((all, count) => all + count)
+        : null;
     },
   }))
   .actions(self => ({
