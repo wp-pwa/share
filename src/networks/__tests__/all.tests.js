@@ -22,7 +22,7 @@ beforeEach(() => {
     unprotect(share);
 });
 
-describe('Share > All', () => {
+describe('Share › All', () => {
   test('count', () => {
     expect(share.all.count({ type: 'post', id: 60 })).toBe(null);
 
@@ -35,7 +35,7 @@ describe('Share > All', () => {
     expect(share.all.count({ type: 'post', id: 60 })).toBe(300);
   });
 
-  test('requestCount', async () => {
+  test('requestCount', () => {
     const requestCount = jest.fn();
     share.network1.requestCount = requestCount;
     share.network2.requestCount = requestCount;
