@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/frontity/share/compare/v0.2.2...v0.2.3) (2018-07-17)
+
+
+### Bug Fixes
+
+* **share-all:** handle empty array before doing a reduce ([33db5b4](https://github.com/frontity/share/commit/33db5b4))
+
 ## [0.2.2](https://github.com/frontity/share/compare/v0.2.1...v0.2.2) (2018-07-10)
 
 
