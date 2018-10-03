@@ -1,3 +1,11 @@
+## [0.2.4](https://github.com/frontity/share/compare/v0.2.3...v0.2.4) (2018-10-03)
+
+
+### Bug Fixes
+
+* **network:** fix countMap prop ([9915901](https://github.com/frontity/share/commit/9915901))
+* **npm:** update mobx and mst versions ([4910237](https://github.com/frontity/share/commit/4910237))
+
 ## [0.2.3](https://github.com/frontity/share/compare/v0.2.2...v0.2.3) (2018-07-17)
 
 
