@@ -28,11 +28,13 @@ describe('Share > Network', () => {
     const Stores = types.model('Stores', {
       theme: types.optional(
         types.model('Theme', {
-          share: types.model('Share', { network1: types.optional(Network, {}) }),
+          share: types.model('Share', {
+            network1: types.optional(Network, {}),
+          }),
         }),
         { share: {} },
       ),
-      connection: types.optional(types.frozen, {
+      connection: types.frozen({
         entity: jest
           .fn()
           .mockReturnValueOnce({ link: link1 })
@@ -42,7 +44,11 @@ describe('Share > Network', () => {
 
     const stores = Stores.create({});
 
-    expect(stores.theme.share.network1.entityLink({ type: 'post', id: 63 })).toBe(link1);
-    expect(stores.theme.share.network1.entityLink({ type: 'post', id: 60 })).toBe(link2);
+    expect(
+      stores.theme.share.network1.entityLink({ type: 'post', id: 63 }),
+    ).toBe(link1);
+    expect(
+      stores.theme.share.network1.entityLink({ type: 'post', id: 60 }),
+    ).toBe(link2);
   });
 });
