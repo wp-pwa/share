@@ -1,6 +1,6 @@
 {
   "name": "@frontity/share",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Share utilities for the Frontity platform.",
   "main": "src/index.js",
   "module": "src/index.js",
