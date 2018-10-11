@@ -1,6 +1,6 @@
 {
   "name": "@frontity/share",
-  "version": "0.2.4",
+  "version": "1.0.0",
   "description": "Share utilities for the Frontity platform.",
   "main": "./lib/index.js",
   "scripts": {
@@ -11,9 +11,11 @@
     "lint-staged": "lint-staged",
     "build": "npm run clean && babel src -d lib --ignore '**/*.tests.js'",
     "clean": "rm -rf lib && mkdir lib",
-    "prepublishOnly": "npm run build",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
+  },
+  "publishConfig": {
+    "tag": "next"
   },
   "repository": {
     "type": "git",
@@ -69,6 +71,5 @@
     "superagent": "^3.8.3",
     "travis-deploy-once": "^5.0.0",
     "url": "^0.11.0"
-  },
-  "dependencies": {}
+  }
 }
