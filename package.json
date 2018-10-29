@@ -38,10 +38,9 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.49",
-    "@babel/core": "^7.0.0-beta.49",
-    "@babel/preset-env": "^7.0.0-beta.49",
-    "@babel/preset-react": "^7.0.0-beta.49",
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "@commitlint/cli": "^7.0.0",
     "@commitlint/config-conventional": "^7.0.1",
     "@semantic-release/changelog": "^3.0.1",
@@ -58,7 +57,6 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.17.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.9.1",
     "husky": "^1.0.0-rc.9",
     "jest": "^23.1.0",
     "lint-staged": "^7.2.0",
@@ -69,6 +67,5 @@
     "superagent": "^3.8.3",
     "travis-deploy-once": "^5.0.9",
     "url": "^0.11.0"
-  },
-  "dependencies": {}
+  }
 }
