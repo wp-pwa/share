@@ -1,3 +1,10 @@
+## [0.2.6](https://github.com/frontity/share/compare/v0.2.5...v0.2.6) (2018-10-29)
+
+
+### Bug Fixes
+
+* **babel:** fixes babel config ([df3e5df](https://github.com/frontity/share/commit/df3e5df))
+
 ## [0.2.5](https://github.com/frontity/share/compare/v0.2.4...v0.2.5) (2018-10-29)
 
 
