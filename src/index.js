@@ -1,3 +1,4 @@
+import '@babel/polyfill';
 import { types } from 'mobx-state-tree';
 import All from './networks/all';
 import Facebook from './networks/facebook';
