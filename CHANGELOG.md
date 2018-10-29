@@ -1,3 +1,11 @@
+## [0.2.5](https://github.com/frontity/share/compare/v0.2.4...v0.2.5) (2018-10-29)
+
+
+### Bug Fixes
+
+* **babel:** update babel packages ([06aa670](https://github.com/frontity/share/commit/06aa670))
+* **semantic-release:** fix repository url in package.json ([c9adadb](https://github.com/frontity/share/commit/c9adadb))
+
 ## [0.2.4](https://github.com/frontity/share/compare/v0.2.3...v0.2.4) (2018-10-03)
 
 
